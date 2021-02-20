@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Test Automation using Selenium]" guice-stage="DEVELOPMENT">
+  <parameter name="Browser" value="Chrome"/>
+  <test thread-count="5" parallel="classes" name="Amazon Functional Testing(failed)">
+    <parameter name="Category" value="Books"/>
+    <parameter name="ItemName" value="Da Vinci Code"/>
+    <classes>
+      <class name="com.qa.cgi.testscripts.Amazon_SearchMultipleItems">
+        <methods>
+          <include name="CheckTitle"/>
+          <include name="TestClosure"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="LaunchURL"/>
+        </methods>
+      </class> <!-- com.qa.cgi.testscripts.Amazon_SearchMultipleItems -->
+      <class name="com.qa.cgi.testscripts.AmazonExtentReportExample">
+        <methods>
+          <include name="CheckTitle"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="endTest"/>
+          <include name="StartTest"/>
+        </methods>
+      </class> <!-- com.qa.cgi.testscripts.AmazonExtentReportExample -->
+      <class name="com.qa.cgi.testscripts.Amazon_TestScript">
+        <methods>
+          <include name="FooterLinks"/>
+          <include name="CountriesList"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="launchURL"/>
+          <include name="checklinks"/>
+        </methods>
+      </class> <!-- com.qa.cgi.testscripts.Amazon_TestScript -->
+    </classes>
+  </test> <!-- Amazon Functional Testing(failed) -->
+</suite> <!-- Failed suite [Test Automation using Selenium] -->
